@@ -1,0 +1,119 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system with restaurant-inspired warm palette */
+
+@layer base {
+  :root {
+    --background: 47 22% 92%; /* Soft cream background */
+    --foreground: 15 52% 18%; /* Dark wood text */
+
+    --card: 47 22% 95%;
+    --card-foreground: 15 52% 18%;
+
+    --popover: 47 22% 97%;
+    --popover-foreground: 15 52% 18%;
+
+    --primary: 15 52% 18%; /* Wood dark */
+    --primary-foreground: 47 22% 92%;
+
+    --secondary: 21 20% 65%; /* Wood beige */
+    --secondary-foreground: 15 52% 18%;
+
+    --muted: 47 22% 88%;
+    --muted-foreground: 21 20% 45%;
+
+    --accent: 14 36% 42%; /* Wood medium */
+    --accent-foreground: 47 22% 92%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 47 22% 85%;
+    --input: 47 22% 92%;
+    --ring: 15 52% 18%;
+
+    --radius: 16px;
+
+    --sidebar-background: 21 20% 65%;
+    --sidebar-foreground: 15 52% 18%;
+    --sidebar-primary: 15 52% 18%;
+    --sidebar-primary-foreground: 47 22% 92%;
+    --sidebar-accent: 47 22% 90%;
+    --sidebar-accent-foreground: 15 52% 18%;
+    --sidebar-border: 47 22% 80%;
+    --sidebar-ring: 15 52% 18%;
+  }
+
+  .dark {
+    --background: 15 52% 8%;
+    --foreground: 47 22% 92%;
+
+    --card: 15 52% 12%;
+    --card-foreground: 47 22% 92%;
+
+    --popover: 15 52% 8%;
+    --popover-foreground: 47 22% 92%;
+
+    --primary: 47 22% 92%;
+    --primary-foreground: 15 52% 18%;
+
+    --secondary: 21 20% 25%;
+    --secondary-foreground: 47 22% 92%;
+
+    --muted: 15 52% 15%;
+    --muted-foreground: 21 20% 65%;
+
+    --accent: 14 36% 32%;
+    --accent-foreground: 47 22% 92%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 15 52% 20%;
+    --input: 15 52% 15%;
+    --ring: 47 22% 92%;
+    
+    --sidebar-background: 15 52% 10%;
+    --sidebar-foreground: 47 22% 92%;
+    --sidebar-primary: 47 22% 92%;
+    --sidebar-primary-foreground: 15 52% 18%;
+    --sidebar-accent: 15 52% 15%;
+    --sidebar-accent-foreground: 47 22% 92%;
+    --sidebar-border: 15 52% 20%;
+    --sidebar-ring: 47 22% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-wood-beige rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-wood-medium;
+}
